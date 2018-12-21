@@ -1,0 +1,221 @@
+/* CSS Document */
+html, body, div, span, object, iframe,h1, h2, 
+h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, 
+em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, 
+ol, ul, li,fieldset, form, label, legend,table, caption, tbody, 
+tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption, 
+figure, footer, header, hgroup, menu, nav, section, summary,time, mark, 
+audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    outline-style:none;/*FF*/ 
+}
+
+body {
+    line-height:1;
+}
+li {list-style-type:none;}
+a{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+     
+}
+a:hover,a:focus{
+    text-decoration:none;
+    outline-style:none;/*FF*/
+    }
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+ 
+input, select {
+    vertical-align:middle;
+}
+
+/*css为clearfix，清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
+}
+
+
+// init -----end
+// 全局，首页，注册登录
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+}
+// 主题色
+body{
+    background-color: #ffffff;
+}
+// 首页的
+@header-top-index: 40px;
+
+// 登录
+@header-top-login: 60px;
+
+// 交易员
+@header-top-trader: 60px;
+
+// -----------------------------------   手机端公用样式   -----------------------------
+// border-box
+.border-wrap{
+    div{
+        box-sizing: border-box;
+    }
+}
+
+// 垂直居中
+.flex-vertical-center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+// 操作栏
+.header-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 60px;
+    z-index: 10;
+}
+// 一级标题
+.title-text-one{
+    font-size: 40px;
+    color: #ffffff;
+    padding: 16px 0 0 24px;
+    text-shadow:  2px 2px 5px #333333;
+}
+
+.con-wrap-text{
+    padding:  0 18px 0px;
+    width: 100%;
+    box-sizing: border-box;
+    // 一个省份简介box
+    .con-list-box{
+        width: 100%;
+        h3{
+            font-size: 26px;
+            line-height: 65px;       
+        }
+        // 小段落的p样式
+        .intro-one{
+            color: #303133;
+            width: 100%;
+            box-sizing: border-box;
+            padding-bottom: 20px;
+            font-size: 18px;
+            text-indent: 36px;
+            line-height: 32px;
+        }
+    }
+}
+
+
+// 民族详情的段落样式
+.a-content-wrap{
+  padding: 0px 18px;    
+  background-color: #ffffff;
+  color: #303133;
+}
+.a-content-title{
+    line-height: 65px;
+    font-size: 26px;
+}
+.a-content-text{
+    font-size: 18px;  
+    line-height: 30px;
+    text-indent: 36px;    
+}
+
+// 底线
+.bottom-end{
+    text-align: center;
+    padding: 42px 0 10px;
+    font-size: 12px;
+    color: #C0C4CC;
+}
+
+
+// 普通浏览模式：为了让浏览器检测到body的滑动自动隐藏，在点击菜单的时候为以下样式
+#app.mview{
+    height: 100%;
+    overflow: hidden;
+    .app-wrapper{
+        height: 100%;
+    }
+    .view-box{
+        height: 100%; 
+        overflow: hidden;       
+    }
+}
+
+// 建设中的字体
+.ing{
+    font-size: 30px;
+}
+.ingH{
+    height: 1000px;
+    width: 100%;
+}
+.test{
+    width: 100%;
+    height: 1000px;
+}
+
+// 滚动条
+::-webkit-scrollbar
+{
+    width: 6px;
+    height: 4px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar:hover
+{
+    width: 10px;
+    height: 4px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: hsla(220, 4%, 58%, .2); 
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsla(220, 4%, 58%, .4); 
+}
+
+
+
+// -----------------------------------   pc端公用样式调试   -----------------------------
+.mx-view{
+    max-width: 1000px;
+    margin: 0 auto;
+}

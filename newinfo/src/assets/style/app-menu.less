@@ -1,0 +1,62 @@
+.open-menu.app-wrapper{
+  height: 100vh;  
+  overflow: hidden;
+  .view-box{
+    height: 100vh;
+    overflow: hidden;
+    // transform: scale3d(.6,.6,.6) translateX(300px);
+    transform: translateX(280px);
+  }
+}
+
+.app-wrapper{
+  // overflow-x: hidden;
+  // overflow-y: -webkit-paged-y;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(-130deg,#cccccc, #000000);  
+  
+  .menu-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 100%;
+  }
+  // 省份内少数民族弹出框   （副列表）
+  .assistant-menu-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    .assistant-menu-wrap{
+      flex-basis: 60%;
+      // flex-grow: 4;
+    }
+    .assistant-menu-mask{
+      flex-basis: 40%;
+      // flex-grow: 1;
+      background: rgba(0,0,0,.3);
+    }
+  }
+  
+  .view-box{
+    transition: all .5s;
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    // 缩小时的蒙版，用来点击之后返回变大
+    .mask{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.3);
+      z-index: 999;
+    }
+  }
+}
